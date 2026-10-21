@@ -1,0 +1,36 @@
+test_cli_engine_selection_and_no_silent_fallback (test_cli.ClaudeTests.test_cli_engine_selection_and_no_silent_fallback) ... ok
+test_fixed_arguments_and_untrusted_stdin (test_cli.ClaudeTests.test_fixed_arguments_and_untrusted_stdin) ... ok
+test_invalid_model_output (test_cli.ClaudeTests.test_invalid_model_output) ... ok
+test_subprocess_failures_are_safe (test_cli.ClaudeTests.test_subprocess_failures_are_safe) ... ok
+test_changed_head (test_cli.ClientTests.test_changed_head) ... ok
+test_file_cap_and_missing_page (test_cli.ClientTests.test_file_cap_and_missing_page) ... ok
+test_invalid_json_and_oversized_response (test_cli.ClientTests.test_invalid_json_and_oversized_response) ... ok
+test_invalid_metadata_and_files (test_cli.ClientTests.test_invalid_metadata_and_files) ... ok
+test_missing_and_large_patch_partial (test_cli.ClientTests.test_missing_and_large_patch_partial) ... ok
+test_not_found (test_cli.ClientTests.test_not_found) ... ok
+test_pagination_and_headers (test_cli.ClientTests.test_pagination_and_headers) ... ok
+test_rate_limit_long_wait_fails (test_cli.ClientTests.test_rate_limit_long_wait_fails) ... ok
+test_rate_limit_short_retry (test_cli.ClientTests.test_rate_limit_short_retry) ... ok
+test_rejects_arbitrary_api_path_and_redirect (test_cli.ClientTests.test_rejects_arbitrary_api_path_and_redirect) ... ok
+test_total_patch_budget (test_cli.ClientTests.test_total_patch_budget) ... ok
+test_transient_failures_bounded (test_cli.ClientTests.test_transient_failures_bounded) ... ok
+test_url_validation (test_cli.ClientTests.test_url_validation) ... ok
+test_cli_success_and_error (test_cli.ReviewTests.test_cli_success_and_error) ... ok
+test_findings_and_coverage (test_cli.ReviewTests.test_findings_and_coverage) ... ok
+test_removed_lines_do_not_trigger (test_cli.ReviewTests.test_removed_lines_do_not_trigger) ... ok
+test_untrusted_text_is_inert (test_cli.ReviewTests.test_untrusted_text_is_inert) ... ok
+test_claude_is_default (test_contract.ContractTests.test_claude_is_default) ... ok
+test_real_runner_caps_both_streams (test_contract.ContractTests.test_real_runner_caps_both_streams) ... ok
+test_real_runner_private_cwd_and_environment_filter (test_contract.ContractTests.test_real_runner_private_cwd_and_environment_filter) ... ok
+test_real_runner_timeout (test_contract.ContractTests.test_real_runner_timeout) ... ok
+test_rejects_active_hidden_and_control_output (test_contract.ContractTests.test_rejects_active_hidden_and_control_output) ... ok
+test_rejects_bad_summary_lengths_and_bullets (test_contract.ContractTests.test_rejects_bad_summary_lengths_and_bullets) ... ok
+test_rejects_oversized_output (test_contract.ContractTests.test_rejects_oversized_output) ... ok
+test_rejects_prose_or_empty_findings (test_contract.ContractTests.test_rejects_prose_or_empty_findings) ... ok
+test_rejects_wrong_confidence_or_sections (test_contract.ContractTests.test_rejects_wrong_confidence_or_sections) ... ok
+test_valid_two_and_three_sentence_review (test_contract.ContractTests.test_valid_two_and_three_sentence_review) ... ok
+
+----------------------------------------------------------------------
+Ran 31 tests in 0.209s
+
+OK

@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "claude-review"
+version = "0.1.0"
+description = "Credential-free public GitHub PR review CLI"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+claude-review = "claude_review.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["claude_review*"]

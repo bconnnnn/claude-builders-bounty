@@ -1,0 +1,23 @@
+{
+  "recorded_at_utc": "2026-10-21T08:08:23.329868+00:00",
+  "checks": [
+    {
+      "pr_url": "https://github.com/pallets/flask/pull/6168",
+      "engine": "heuristic",
+      "actual_cli_exit_status": 0,
+      "preserved_sample_match": true,
+      "sha256": "3abaa58c367a4d2158b7b1e81cf4782683bd80cee405d55836f3ada509574797",
+      "claude_invoked": false,
+      "target_pr_tests_executed": false
+    },
+    {
+      "pr_url": "https://github.com/pallets/flask/pull/5400",
+      "engine": "heuristic",
+      "actual_cli_exit_status": 0,
+      "preserved_sample_match": true,
+      "sha256": "c22a517fa7260c987d0e629e8db14ecfb61efaf5ee0feb77d3eb5a7c14baf659",
+      "claude_invoked": false,
+      "target_pr_tests_executed": false
+    }
+  ]
+}
