@@ -9,6 +9,7 @@ from pathlib import Path
 
 DANGEROUS = (
     (re.compile(r'(?<![\w])rm\s+(?:(?:-[\w]*r[\w]*\s+[^\n;]*?-[\w]*f)|(?:-[\w]*f[\w]*\s+[^\n;]*?-[\w]*r)|(?:-[\w]*[rf][\w]*[rf][\w]*)|(?:--recursive\s+--force)|(?:--force\s+--recursive))\b', re.I), 'forced recursive deletion'),
+    (re.compile(r'\brm\s+(?:(?:-r|--recursive)\s+(?:-f|--force)|(?:-f|--force)\s+(?:-r|--recursive))(?=\s|$)', re.I), 'forced recursive deletion'),
     (re.compile(r'\bDROP\s+TABLE\b', re.I), 'DROP TABLE'),
     (re.compile(r'\bTRUNCATE(?:\s+TABLE)?\b', re.I), 'TRUNCATE'),
     (re.compile(r'\bgit\s+push\b[^\n;|]*?(?:--force(?:-with-lease|-if-includes)?\b|(?:^|\s)-f(?:\s|$))', re.I), 'force push'),
@@ -18,7 +19,7 @@ DANGEROUS = (
 def check(command):
     for pattern, reason in DANGEROUS:
         for match in pattern.finditer(command):
-            if reason == 'unqualified DELETE FROM' and re.search(r'\bWHERE\b', match.group(), re.I):
+            if reason == 'unqualified DELETE FROM' and re.search(r'\bWHERE\b', re.sub(r'/\*.*?\*/|--[^\n]*', '', match.group(), flags=re.S), re.I):
                 continue
             return reason
     return None

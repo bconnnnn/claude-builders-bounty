@@ -10,7 +10,7 @@ import hook
 
 class GuardTests(unittest.TestCase):
     def test_dangerous(self):
-        for command in ['rm -rf /tmp/a', 'rm -fr /tmp/a', 'rm --recursive --force /tmp/a', 'DROP TABLE users', 'TRUNCATE TABLE users', 'git push origin main --force', 'git push -f origin main', 'DELETE FROM users;']:
+        for command in ['rm -rf /tmp/a', 'rm -fr /tmp/a', 'rm -r --force /tmp/a', 'rm --force -r /tmp/a', 'rm --recursive -f /tmp/a', 'DELETE FROM users /* WHERE */', 'rm --recursive --force /tmp/a', 'DROP TABLE users', 'TRUNCATE TABLE users', 'git push origin main --force', 'git push -f origin main', 'DELETE FROM users;']:
             with self.subTest(command=command):
                 self.assertIsNotNone(hook.check(command))
 
