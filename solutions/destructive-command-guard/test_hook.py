@@ -28,6 +28,7 @@ class GuardTests(unittest.TestCase):
             self.assertTrue(log.exists())
             record = json.loads(log.read_text().strip())
             self.assertEqual(record['project_path'], '/example')
+            self.assertEqual(len(log.read_text().splitlines()), 1)
             self.assertIn('DROP TABLE', stderr.getvalue())
 
     def test_allow_no_log(self):
